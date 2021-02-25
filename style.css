@@ -7,9 +7,13 @@
   padding: 0;
   margin: 0;
 }
+@font-face {
+  font-family: 'minecraft';
+  src:  url('./fonts/Minecraft.ttf') format('truetype');
+}
 body {
   height: 100vh;
-  font-family: minecraftFontBold;
+  font-family: 'minecraft';
   color: black;
   position: relative;
 }
