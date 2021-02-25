@@ -54,6 +54,19 @@ div .tool{
   height: 100%;
   border: 1px black solid;
 }
+/* tools  */
+[data-type="t0"]{
+  background:url(./img/PinClipart.com_shovel-clip-art_3735821.png) center no-repeat ;
+  background-size: 100% 100%;
+}
+[data-type="t1"]{
+  background:url(./img/PinClipart.com_axe-clip-art_5397833.png) center no-repeat ;
+  background-size: 100% 100%;
+}
+[data-type="t2"]{
+  background:url(./img/PinClipart.com_minecraft-birthday-clipart_751039.png) center no-repeat ;
+  background-size: 100% 100%;
+}
 
 /* inventory */
 #inventory{
@@ -61,7 +74,8 @@ div .tool{
 }
 /* matiriales */
 [data-type="dirt"]{
-  background: brown;
+  background:url(./img/dirt_block.jpg);
+  background-size: 100% 100%;
 }
 [data-type="cloud"]{
   background: white;
@@ -70,17 +84,21 @@ div .tool{
   background:rgb(38, 0, 255);
 }
 [data-type="grass"]{
-  background:rgb(0, 255, 34);
+  background:url(./img/Grass_top.png);
+  background-size: 100% 100%;
 }
 [data-type="tree-base"]{
-  background:rgb(43, 33, 0);
+  background:url(./img/tree_trunk_block.jfif);
+  background-size: 100% 100%;
 }
 [data-type="tree-lif"]{
-  background:rgb(9, 77, 15);
+  background:url(./img/leaf.jfif);
+  background-size: 100% 100%;
 }
 [data-type="sun"]{
   background:rgb(241, 245, 37);
 }
 [data-type="stone"]{
-  background:rgb(124, 124, 116);
+  background:url(./img/stone.jpg);
+  background-size: 100% 100%;
 }
