@@ -4,8 +4,17 @@ let stones = 5;
 let wood = 5;
 let dirts = 5;
 let grass = 5;
+// start button
+const startBtn = document.querySelector('.start');
+const landingPage = document.querySelector('.landing');
+
+startBtn.addEventListener('click', () => {
+  console.log('btn work');
+  landing.style.visibility = 'hidden';
+});
 // event listeners
 // functions
+
 const chose = (e) => {
   chosenTool = parseInt(e.target.innerHTML);
   console.log(chosenTool);

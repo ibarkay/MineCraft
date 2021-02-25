@@ -79,7 +79,7 @@ createTree();
 
 function createSun() {
   for (let row = 3; row < 5; row++) {
-    for (let col = 23; col < 26; col++) {
+    for (let col = 23; col < 25; col++) {
       matrix[row][col].setAttribute('data-type', 'sun');
     }
   }

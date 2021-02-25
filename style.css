@@ -1,3 +1,41 @@
+
+
+.landing{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: ;
+  background: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* visibility: hidden; */
+}
+.landing .logo{
+  background:url('./img/minecraft-logo-angle-text.png') center/cover no-repeat  ;
+  width: 100%;
+  margin-top: 10px;
+  
+}
+.landing .logo#low,
+.landing .logo#high{
+  opacity: 0.05;
+}
+.starter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.start{
+  font-size: 3rem;
+  background: #c6c6c6;
+  width: 40%;
+  text-align: center;
+}
+.start:hover{
+  background: #888888;
+  cursor: pointer;
+}
 /* globals */
 :root {
   --world-size : 30;
@@ -5,6 +43,7 @@
 *{
   box-sizing: border-box;
   padding: 0;
+  font-family: 'minecraft';
   margin: 0;
 }
 @font-face {
