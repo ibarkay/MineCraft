@@ -14,6 +14,7 @@ function create() {
       matrix[row][col] = document.createElement('div');
       matrix[row][col].setAttribute('data-row', row);
       matrix[row][col].setAttribute('data-col', col);
+      matrix[row][col].setAttribute('data-type', 'sky');
       matrix[row][col].classList.add('tile');
 
       world.appendChild(matrix[row][col]);

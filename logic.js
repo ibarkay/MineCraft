@@ -1,9 +1,9 @@
 // globals
 let chosenTool = 10;
-let stones = 0;
-let wood = 0;
-let dirts = 0;
-let grass = 0;
+let stones = 5;
+let wood = 5;
+let dirts = 5;
+let grass = 5;
 // event listeners
 // functions
 const chose = (e) => {
@@ -61,35 +61,44 @@ const choseTile = (e) => {
   // add dirt
   if (chosenTool === 3) {
     if (e.currentTarget.attributes['data-type'].value === 'sky') {
-      stones++;
-      e.currentTarget.setAttribute('data-type', 'dirt');
-      tick();
+      if (dirts > 0) {
+        dirts--;
+        e.currentTarget.setAttribute('data-type', 'dirt');
+        tick();
+      }
     }
   }
   // add wood
   if (chosenTool === 4) {
     if (e.currentTarget.attributes['data-type'].value === 'sky') {
-      stones++;
-      e.currentTarget.setAttribute('data-type', 'wood');
-      tick();
+      if (wood > 0) {
+        wood--;
+        e.currentTarget.setAttribute('data-type', 'tree-base');
+        tick();
+      }
     }
   }
   // add grass
   if (chosenTool === 5) {
     if (e.currentTarget.attributes['data-type'].value === 'sky') {
-      stones++;
-      e.currentTarget.setAttribute('data-type', 'grass');
-      tick();
+      if (grass > 0) {
+        grass--;
+        e.currentTarget.setAttribute('data-type', 'grass');
+        tick();
+      }
     }
   }
   // add stone
   if (chosenTool === 6) {
     if (e.currentTarget.attributes['data-type'].value === 'sky') {
-      stones++;
-      e.currentTarget.setAttribute('data-type', 'stone');
-      tick();
+      if (stones > 0) {
+        stones--;
+        e.currentTarget.setAttribute('data-type', 'stone');
+        tick();
+      }
     }
   }
+  console.log(chosenTool);
 };
 
 // ev-tools
@@ -109,3 +118,4 @@ for (const row in matrix) {
     matrix[row][col].addEventListener('click', choseTile);
   }
 }
+tick();
