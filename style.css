@@ -59,7 +59,8 @@ div .tool{
   height: 50px;
   color: #c6c6c6;
 }
-div .tool:hover{
+div .tool:hover,
+#mat:hover{
   border: 1px solid black;
   box-shadow: 5px 5px #888888;
   cursor: pointer;
@@ -99,32 +100,47 @@ div .tool:hover .tooltiptext{
   background: #c6c6c6;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   /* position: relative; */
   align-items: center;
 
 }
 #mat-0{
-  background: red;
+  margin: 1px;
+  background: url('./img/dirt_inv.jpg');
+  background-position: center center;
+  background-size: cover;
   width: 50%;
   height: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-direction: column-reverse;
   
 }
-#mat-1{
-  background: rgb(0, 255, 13);
+#mat{
+  margin: 1px;
+  /* background: url('./img/wood_inv.jpg'); */
+  background-position: center center;
+  background-size: cover;
   width: 50%;
   height: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-direction: column-reverse;
 }
-#mat-2{
-  background: rgb(25, 0, 255);
-  width: 50%;
-  height: 30%;
+#mat.cl-0{
+  background:url('./img/dirt_inv.jpg');
 }
-#mat-3{
-  background: rgb(255, 0, 179);
-  width: 50%;
-  height: 30%;
-  margin-right: 10px;
+#mat.cl-1{
+  background:url('./img/wood_inv.jpg');
+}
+#mat.cl-2{
+  background:url('./img/Grass_top.png');
+}
+#mat.cl-3{
+  background:url('./img/stone_block.png');
 }
 
 /* matiriales and tiles*/
