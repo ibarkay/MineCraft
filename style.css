@@ -17,14 +17,14 @@ body {
 /*  */
 #game {
   width: 100%;;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 100vh 1fr 8vw;
 }
 #world {
   max-height: 100%;
-  border: 1px solid black;
+  border: 10px solid #c6c6c6;
   display: grid;
   grid-template-columns: repeat(var(--world-size), auto);
   grid-template-rows: repeat(var(--world-size), auto);
@@ -42,10 +42,10 @@ body {
 /* side-bar */
 #sidebar {
   display: grid;
-  border: 1px black solid;
+  /* border: 1px black solid; */
 }
 #tools {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   background: #c6c6c6;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -58,8 +58,26 @@ div .tool{
   
   width: 50px;
   height: 50px;
-  /* border: 1px black solid; */
   color: #c6c6c6;
+}
+div .tool:hover{
+  border: 1px solid black;
+  box-shadow: 5px 5px #888888;
+}
+.tooltiptext{
+  visibility: hidden;
+  background-color: #949090;
+  width: 300px;
+  color: black;
+  
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  left: 22rem;
+}
+div .tool:hover .tooltiptext{
+  visibility: visible;
 }
 /* tools  */
 [data-type="t0"]{
@@ -77,7 +95,7 @@ div .tool{
 
 /* inventory */
 #inventory{
-  border: 1px solid rgb(46, 9, 148);
+  /* border: 1px solid rgb(46, 9, 148); */
   background: #c6c6c6;
 }
 /* matiriales */
