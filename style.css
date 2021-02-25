@@ -1,0 +1,86 @@
+/* globals */
+:root {
+  --world-size : 30;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  font-family: minecraftFontBold;
+  color: black;
+  position: relative;
+}
+
+/*  */
+#game {
+  width: 100%;;
+  border: 1px solid black;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 100vh 1fr 8vw;
+}
+#world {
+  max-height: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(var(--world-size), auto);
+  grid-template-rows: repeat(var(--world-size), auto);
+  grid-gap: 0;
+  grid-column: 2 / 2;
+}
+/*  */
+.tile {
+  background: rgb(38, 0, 255);
+  border: 1px dotted rgba(255, 255, 255, 0.1);
+}
+.tile:hover{
+  border: 1px dotted red;
+}
+/* side-bar */
+#sidebar {
+  display: grid;
+  border: 1px black solid;
+}
+#tools {
+  border: 1px red solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+div .tool{
+  width: 100%;
+  height: 100%;
+  border: 1px black solid;
+}
+
+/* inventory */
+#inventory{
+  border: 1px solid rgb(46, 9, 148);
+}
+/* matiriales */
+[data-type="dirt"]{
+  background: brown;
+}
+[data-type="cloud"]{
+  background: white;
+}
+[data-type="sky"]{
+  background:rgb(38, 0, 255);
+}
+[data-type="grass"]{
+  background:rgb(0, 255, 34);
+}
+[data-type="tree-base"]{
+  background:rgb(43, 33, 0);
+}
+[data-type="tree-lif"]{
+  background:rgb(9, 77, 15);
+}
+[data-type="sun"]{
+  background:rgb(241, 245, 37);
+}
+[data-type="stone"]{
+  background:rgb(124, 124, 116);
+}
