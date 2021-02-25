@@ -141,6 +141,7 @@ div .tool:hover .tooltiptext{
 }
 #mat.cl-3{
   background:url('./img/stone_block.png');
+  margin-right: 10px;
 }
 
 /* matiriales and tiles*/
@@ -180,4 +181,8 @@ div .tool:hover .tooltiptext{
 [data-type="stone"]{
   background:url(./img/stone.jpg);
   background-size: 100% 100%;
+}
+/* chosen class */
+.chosen{
+  border: 3px red solid;
 }
