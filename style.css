@@ -226,36 +226,32 @@ div .tool:hover .tooltiptext{
   border: 3px red solid;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  #game {
-    width: 100%;;
-    /* border: 1px solid black; */
-    height: 100%;
-    display: grid;
-    grid-template-columns: 10fr 100fr 30fr 10fr;  ;
-    /* background: red; */
-    
-  }
-  .tooltiptext{
-    visibility: hidden;
-    background-color: #949090;
-    width: 300px;
-    color: black;
-    
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    left: 10rem;
-  }
+
+.rotate{
+  width: 100vw;
+  height: 100vh;
+  background: #c6c6c6;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  visibility: hidden;
 }
-@media only screen and (max-width: 768px) {
+
+/* Responsive Media's */
+/* landscape */
+@media only screen and (max-width: 812px) {
   /* For mobile phones: */
+  body, html { overflow-x:hidden; }
   #game {
-    width: 100%;;
+    max-width: 100vw;;
     /* border: 1px solid black; */
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 10fr 100fr 30fr 10fr;  ;
     /* background: red; */
@@ -273,4 +269,19 @@ div .tool:hover .tooltiptext{
     position: absolute;
     left: 10rem;
   }
+  .landing{
+    height: 100%;
+    max-width: 100vw;
+    /* background: red; */
+  }
+  
+}
+
+
+/* horizontal phone */
+@media only screen and (max-width: 500px) {
+  
+  body, html { overflow-x:hidden; }
+  .rotate{visibility: visible;}
+  
 }
