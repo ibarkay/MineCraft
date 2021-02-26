@@ -1,6 +1,7 @@
 const sidebar = document.querySelector('#sidebar');
 const tools = document.querySelector('#tools');
 
+
 for (let i = 0; i < 3; i++) {
   const div = document.createElement('div');
   div.classList.add('tool');
@@ -18,3 +19,4 @@ for (let i = 0; i < 3; i++) {
   div.appendChild(span);
   tools.appendChild(div);
 }
+

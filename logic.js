@@ -1,4 +1,5 @@
 // globals
+// TODO : slected function to highlight selected tool , headline for tools and inventory
 let chosenTool = 10;
 let stones = 5;
 let wood = 5;
@@ -20,19 +21,22 @@ const chose = (e) => {
   console.log(chosenTool);
 };
 const choseMat = (e) => {
-  if (e.path[0].classList.value === 'cl-0') {
+  if (e.target.classList.value === 'cl-0') {
     chosenTool = 3;
   }
-  if (e.path[0].classList.value === 'cl-1') {
+  if (e.target.classList.value === 'cl-1') {
     chosenTool = 4;
   }
-  if (e.path[0].classList.value === 'cl-2') {
+  if (e.target.classList.value === 'cl-2') {
     chosenTool = 5;
   }
-  if (e.path[0].classList.value === 'cl-3') {
+  if (e.target.classList.value === 'cl-3') {
     chosenTool = 6;
   }
 };
+function choshen() {
+
+}
 // whats haapen when we chose a tile :
 const choseTile = (e) => {
   // dirt and grass
