@@ -3,6 +3,7 @@ const inventory = document.querySelector('#inventory');
 const inventorySum = document.createElement('div');
 inventory.setAttribute('id', 'matiriales-container');
 
+// create inventory -4
 function creatTheInventory() {
   for (let i = 0; i < 4; i++) {
     const boxy = document.createElement('div');
@@ -12,7 +13,8 @@ function creatTheInventory() {
     inventory.append(inventorySum);
   }
 }
-creatTheInventory();
+creatTheInventory(); // call the function
+
 // refresh inventory function
 const tick = () => {
   for (let i = 0; i < 4; i++) {
@@ -31,7 +33,7 @@ const tick = () => {
     }
   }
 };
-
+// clear inventory function
 function ClearTheInventory() {
   inventory.innerHTML = '';
   creatTheInventory();

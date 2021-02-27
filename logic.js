@@ -1,7 +1,6 @@
-// globals
 // TODO : slected function to highlight selected tool , headline for tools and inventory
-// reset button
 
+// globals
 let chosenTool = 10;
 let stones = 5;
 let wood = 5;
@@ -34,7 +33,9 @@ muteBtn.addEventListener('click', () => {
   // TODO :  mutes suonds.
   console.log('MUTE');
 });
-// event listeners
+
+
+
 // functions
 
 function clearSelected(arr) {
@@ -179,6 +180,8 @@ const choseTile = (e) => {
   console.log(chosenTool);
 };
 
+
+// event listeners
 // ev-tools
 for (let i = 0; i < 3; i++) {
   const tool = document.querySelector(`[data-type="t${i}"]`);

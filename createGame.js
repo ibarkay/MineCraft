@@ -4,21 +4,14 @@ const matrix = [];
 const game = document.querySelector('#game');
 const world = document.querySelector('#world');
 
-function createTheWorld() {
-  create();
-  createland(22);
-  createCloud();
-  createGrass();
-  createTree();
-  createSun();
-  createStone();
-}
-createTheWorld();
+createTheWorld(); // call all create functions
+
 // create the matrix
 function create() {
   for (let row = 0; row < worldSize; row++) {
     matrix[row] = [];
     for (let col = 0; col < worldSize; col++) {
+      
       matrix[row][col] = document.createElement('div');
       matrix[row][col].setAttribute('data-row', row);
       matrix[row][col].setAttribute('data-col', col);
@@ -29,8 +22,7 @@ function create() {
     }
   }
 }
-// check
-
+// land
 function createland(fromLine) {
   for (let row = fromLine; row < worldSize; row++) {
     for (let col = 0; col < worldSize; col++) {
@@ -38,8 +30,7 @@ function createland(fromLine) {
     }
   }
 }
-// check
-
+// cluod
 function createCloud() {
   let temp;
   let temp2;
@@ -58,7 +49,7 @@ function createCloud() {
   temp3.setAttribute('data-type', 'sky');
   temp4.setAttribute('data-type', 'sky');
 }
-
+// grass line
 function createGrass() {
   const line = 23;
   for (let row = 22; row < line; row++) {
@@ -67,7 +58,7 @@ function createGrass() {
     }
   }
 }
-
+// tree
 function createTree() {
   const line = 24;
   for (let row = 17; row < 22; row++) {
@@ -81,7 +72,7 @@ function createTree() {
     }
   }
 }
-
+// sun
 function createSun() {
   for (let row = 3; row < 5; row++) {
     for (let col = 23; col < 25; col++) {
@@ -89,7 +80,7 @@ function createSun() {
     }
   }
 }
-
+// stone
 function createStone() {
   for (let row = 21; row < 22; row++) {
     for (let col = 7; col < 15; col++) {
@@ -113,6 +104,17 @@ function createStone() {
   }
 }
 
+// call all function for create
+function createTheWorld() {
+  create();
+  createland(22);
+  createCloud();
+  createGrass();
+  createTree();
+  createSun();
+  createStone();
+}
+// clear function
 function clearStage() {
   world.innerHTML = '';
   createTheWorld();
