@@ -34,8 +34,6 @@ muteBtn.addEventListener('click', () => {
   console.log('MUTE');
 });
 
-
-
 // functions
 
 function clearSelected(arr) {
@@ -179,7 +177,6 @@ const choseTile = (e) => {
   }
   console.log(chosenTool);
 };
-
 
 // event listeners
 // ev-tools
