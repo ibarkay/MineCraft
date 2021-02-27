@@ -4,7 +4,7 @@ min3cr4f7
 
 a 2d look A like minecraft , build as a weekend project .
 
-![alt text](./screenshots\1.png)
+![alt text](./screenshots/1.png)
 how to play:
 
 - press start
