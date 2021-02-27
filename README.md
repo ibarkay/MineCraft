@@ -2,7 +2,7 @@ min3cr4f7
 
 ---
 
-a 2d look A like minecraft , build as a weekend project .
+a 2d look A like minecraft , build as a weekend project in Fullstack course.
 
 ![alt text](./screenshots/1.png)
 
