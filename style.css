@@ -5,26 +5,27 @@
   width: 100%;
   position: absolute;
   top: ;
-  background: black;
+  background:url('./img/screen.jpg') center no-repeat ;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
+  text-align: center;
+  
   /* visibility: hidden; */
 }
-.landing .logo{
-  background:url('./img/minecraft-logo-angle-text.png') center/cover no-repeat  ;
+ .landing .logo img{
+  
   width: 100%;
+ 
   margin-top: 10px;
   
 }
-.landing .logo#low,
-.landing .logo#high{
-  opacity: 0.05;
-}
+
 .starter{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .start{
   font-size: 3rem;
@@ -50,11 +51,13 @@
   font-family: 'minecraft';
   src:  url('./fonts/Minecraft.ttf') format('truetype');
 }
-body {
+body,html {
   height: 100vh;
   font-family: 'minecraft';
   color: black;
   position: relative;
+  
+  
 }
 
 /*  */
@@ -64,7 +67,9 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 100vh 1fr 1fr;
-  background: #888888;
+  background:url('./img/screen.jpg') center no-repeat ;
+  
+  
 }
 #world {
   max-height: 100%;
@@ -75,16 +80,17 @@ body {
   grid-gap: 0;
   grid-column: 2 / 2;
   border: 2px black solid;
+  
 }
 /*  */
 
 /* side-bar */
 #sidebar {
   display: grid;
-  /* border: 1px black solid; */
+  /* border: 1px solid black; */
 }
 #tools {
-  /* border: 1px red solid; */
+  border-bottom: 2px black solid;
   background: #c6c6c6;
   display: grid;
   grid-template-rows:  1fr 1fr 1fr;
@@ -105,6 +111,7 @@ div .tool:hover,
   box-shadow: 5px 5px #888888;
   cursor: pointer;
 }
+
 .tooltiptext{
   visibility: hidden;
   background-color: #949090;
@@ -120,6 +127,17 @@ div .tool:hover,
 div .tool:hover .tooltiptext{
   visibility: visible;
 }
+#btns{
+  background: #c6c6c6;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#btns button{
+  width: 100%;
+  background: #c6c6c6;
+}
+
 /* tools  */
 [data-type="t0"]{
   background:url(./img/PinClipart.com_shovel-clip-art_3735821.png) center no-repeat ;
@@ -134,9 +152,10 @@ div .tool:hover .tooltiptext{
   background-size: 80% 80%;
 }
 
+
 /* inventory */
 #matiriales-container{
-  border: 1px solid rgb(46, 9, 148);
+  /* border: 1px solid rgb(46, 9, 148); */
   background: #c6c6c6;
   display: flex;
   flex-direction: row;
@@ -145,7 +164,7 @@ div .tool:hover .tooltiptext{
   align-items: center;
 
 }
-#mat-0{
+/* #mat-0{
   margin: 1px;
   background: url('./img/dirt_inv.jpg');
   background-position: center center;
@@ -157,12 +176,12 @@ div .tool:hover .tooltiptext{
   align-items: flex-end;
   flex-direction: column-reverse;
   
-}
+} */
 #mat{
   margin: 1px;
   /* background: url('./img/wood_inv.jpg'); */
-  background-position: center center;
-  background-size: cover;
+  /* background-position: center center; */
+  /* background-size: cover; */
   width: 50%;
   height: 30%;
   display: flex;
@@ -191,6 +210,7 @@ div .tool:hover .tooltiptext{
 }
 .tile:hover{
   border: 1px dotted red;
+  
 }
 
 [data-type="dirt"]{
@@ -242,8 +262,16 @@ div .tool:hover .tooltiptext{
   justify-content: center;
   color: black;
   visibility: hidden;
+  overflow-x:hidden; 
 }
-
+.rotate img{
+  
+  width: 100%;
+}
+.rotate img#logo{
+  /* background: red; */
+  margin-bottom: 5rem;
+}
 /* Responsive Media's */
 /* landscape */
 @media only screen and (max-width: 812px) {
@@ -288,4 +316,15 @@ div .tool:hover .tooltiptext{
 }
 .selected{
   box-shadow: 5px 5px #888888;
+  border: 2px black solid;
+}
+/* cursers */
+.cursPicaxe{
+  cursor: url('./img/birthday-clipart_751039CURS.png'),auto;
+}
+.cursAxe{
+  cursor: url('./img/_axe-clip-art_5397833\(curs\).png'),auto;
+}
+.cursShovel{
+  cursor: url('./img/shovel-clip-art_3735821CURS.png'),auto;
 }

@@ -2,12 +2,17 @@ const inventory = document.querySelector('#inventory');
 
 const inventorySum = document.createElement('div');
 inventory.setAttribute('id', 'matiriales-container');
-for (let i = 0; i < 4; i++) {
-  const boxy = document.createElement('div');
-  boxy.setAttribute('id', 'mat');
-  boxy.classList.add(`cl-${i}`);
-  inventory.append(boxy);
+
+function creatTheInventory() {
+  for (let i = 0; i < 4; i++) {
+    const boxy = document.createElement('div');
+    boxy.setAttribute('id', 'mat');
+    boxy.classList.add(`cl-${i}`);
+    inventory.append(boxy);
+    inventory.append(inventorySum);
+  }
 }
+creatTheInventory();
 // refresh inventory function
 const tick = () => {
   for (let i = 0; i < 4; i++) {
@@ -27,4 +32,7 @@ const tick = () => {
   }
 };
 
-inventory.append(inventorySum);
+function ClearTheInventory() {
+  inventory.innerHTML = '';
+  creatTheInventory();
+}

@@ -4,8 +4,16 @@ const matrix = [];
 const game = document.querySelector('#game');
 const world = document.querySelector('#world');
 
-// const inventory = document.querySelector('#inventory');
-
+function createTheWorld() {
+  create();
+  createland(22);
+  createCloud();
+  createGrass();
+  createTree();
+  createSun();
+  createStone();
+}
+createTheWorld();
 // create the matrix
 function create() {
   for (let row = 0; row < worldSize; row++) {
@@ -21,7 +29,7 @@ function create() {
     }
   }
 }
-create(); // check
+// check
 
 function createland(fromLine) {
   for (let row = fromLine; row < worldSize; row++) {
@@ -30,7 +38,7 @@ function createland(fromLine) {
     }
   }
 }
-createland(22); // check
+// check
 
 function createCloud() {
   let temp;
@@ -50,7 +58,6 @@ function createCloud() {
   temp3.setAttribute('data-type', 'sky');
   temp4.setAttribute('data-type', 'sky');
 }
-createCloud();
 
 function createGrass() {
   const line = 23;
@@ -60,7 +67,6 @@ function createGrass() {
     }
   }
 }
-createGrass();
 
 function createTree() {
   const line = 24;
@@ -75,7 +81,6 @@ function createTree() {
     }
   }
 }
-createTree();
 
 function createSun() {
   for (let row = 3; row < 5; row++) {
@@ -84,7 +89,7 @@ function createSun() {
     }
   }
 }
-createSun();
+
 function createStone() {
   for (let row = 21; row < 22; row++) {
     for (let col = 7; col < 15; col++) {
@@ -107,4 +112,13 @@ function createStone() {
     }
   }
 }
-createStone();
+
+function clearStage() {
+  world.innerHTML = '';
+  createTheWorld();
+  chosenTool = 10;
+  stones = 5;
+  wood = 5;
+  dirts = 5;
+  grass = 5;
+}

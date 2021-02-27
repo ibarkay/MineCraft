@@ -1,10 +1,16 @@
 // globals
 // TODO : slected function to highlight selected tool , headline for tools and inventory
+// reset button
+
 let chosenTool = 10;
 let stones = 5;
 let wood = 5;
 let dirts = 5;
 let grass = 5;
+
+const toolsss = [];
+const matsss = [];
+// btns
 // start button
 const startBtn = document.querySelector('.start');
 const landingPage = document.querySelector('.landing');
@@ -13,30 +19,89 @@ startBtn.addEventListener('click', () => {
   console.log('btn work');
   landing.style.visibility = 'hidden';
 });
+const resetBtn = document.querySelector('#reset');
+resetBtn.addEventListener('click', () => {
+  clearStage();
+  ClearTheInventory();
+  console.log('RESET');
+});
+const quitBtn = document.querySelector('#quit');
+quitBtn.addEventListener('click', () => {
+  window.location.reload();
+});
+const muteBtn = document.querySelector('#mute');
+muteBtn.addEventListener('click', () => {
+  // TODO :  mutes suonds.
+  console.log('MUTE');
+});
 // event listeners
 // functions
 
+function clearSelected(arr) {
+  for (const elm of arr) {
+    if (elm.classList.contains('selected')) {
+      elm.classList.remove('selected');
+    }
+  }
+}
+
+// chose tool
 const chose = (e) => {
   chosenTool = parseInt(e.target.innerHTML);
-  console.log(chosenTool);
+  clearSelected(toolsss);
+  game.style.cursor = 'default';
+  e.target.classList.add('selected');
+  cursor();
 };
+// chose matiriales
 const choseMat = (e) => {
   if (e.target.classList.value === 'cl-0') {
+    game.style.cursor = 'default';
+    clearSelected(matsss);
+    e.target.classList.add('selected');
     chosenTool = 3;
   }
   if (e.target.classList.value === 'cl-1') {
+    game.style.cursor = 'default';
+    clearSelected(matsss);
+    e.target.classList.add('selected');
     chosenTool = 4;
   }
   if (e.target.classList.value === 'cl-2') {
+    game.style.cursor = 'default';
+    clearSelected(matsss);
+    e.target.classList.add('selected');
     chosenTool = 5;
   }
   if (e.target.classList.value === 'cl-3') {
+    game.style.cursor = 'default';
+    clearSelected(matsss);
+    e.target.classList.add('selected');
     chosenTool = 6;
   }
 };
-function choshen() {
-
+function restCursor() {
+  game.style.cursor = 'default';
 }
+function clear() {
+  for (const t of toolsss) {
+    if (t.classList.contains('curser')) {
+      t.classList.remove('curser');
+    }
+  }
+}
+function cursor() {
+  if (chosenTool === 0) {
+    game.style.cursor = 'url(\'./img/shovel-clip-art_3735821CURS.png\'),auto';
+  }
+  if (chosenTool === 1) {
+    game.style.cursor = 'url(\'./img/_axe-clip-art_5397833\(curs\).png\'),auto';
+  }
+  if (chosenTool === 2) {
+    game.style.cursor = 'url(\'./img/birthday-clipart_751039CURS.png\'),auto';
+  }
+}
+
 // whats haapen when we chose a tile :
 const choseTile = (e) => {
   // dirt and grass
@@ -118,11 +183,13 @@ const choseTile = (e) => {
 for (let i = 0; i < 3; i++) {
   const tool = document.querySelector(`[data-type="t${i}"]`);
   tool.addEventListener('click', chose);
+  toolsss.push(tool);
 }
 // ev-mat
 for (let i = 0; i < 4; i++) {
-  const tool = document.querySelector(`#mat.cl-${i}`);
-  tool.addEventListener('click', choseMat);
+  const tooly = document.querySelector(`#mat.cl-${i}`);
+  tooly.addEventListener('click', choseMat);
+  matsss.push(tooly);
 }
 
 // ev-tile
